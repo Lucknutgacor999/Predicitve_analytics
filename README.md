@@ -112,16 +112,23 @@ Table diatas memberikan informasi statistik pada masing-masing kolom, antara lai
 |---------------------------------------|--------------|
 | 43744                                  | 9   |
 
+## Data Preparation
 
 ### Exploratory Data Analysis - Menangani Duplikat, Missing Value dan Outliers
 
 **Mengecek missing value, Duplikat dan data yang dianggap memiliki kejanggalan.**
 
+| #  | Column                            | Non-Null Count | Dtype   |
+|----|------------------------------------|----------------|---------|
+| 0  | Age                             | 7385 non-null   | int64 |
+
+- Mengganti tipe data age dari float ke integer dilakukan karena usia secara logis direpresentasikan sebagai bilangan bulat—tidak masuk akal untuk menyatakan usia seseorang sebagai 25.7 tahun dalam konteks kebanyakan analisis atau pemodelan. Selain itu, konversi ini membantu menyederhanakan data, mengurangi kompleksitas, dan menghindari potensi kesalahan pembulatan atau interpretasi saat model machine learning memproses fitur tersebut.
+
 | Data Dupliat                        |
 |-------------------------------------|
 | 1028                               |
 
-- Sebanyak 1028 data akan dihapus karena duplikat
+- Sebanyak 1028 data akan dihapus karena duplikat bertujuan untuk memastikan model machine learning belajar dari pola yang sebenarnya, bukan dari data yang berulang secara tidak wajar. Ini membantu mencegah bias, overfitting, serta meningkatkan akurasi dan generalisasi model, sekaligus menghemat waktu dan sumber daya komputasi.
 
   | Column                              | Value |
   |-------------------------------------|-------|
@@ -155,8 +162,15 @@ Table diatas memberikan informasi statistik pada masing-masing kolom, antara lai
    ![alt text](https://github.com/Lucknutgacor999/Predicitve_analytics/blob/main/resource/boxplot%20outlier%20JS.png?raw=true)  
         
         
-    - Berdasarkan gambar diatas dapat disimpulkan bahwa fitur age, judging score dan sensing score memiliki data outlier karena ada data yang diluar rentang nilai maximum. 
-    - Setelah dipastikan ada data outlier, selanjutnya menerapakan IQR Method untuk mengganti outlier dengan batas bawah dan batas atas pada data tersebut.
+- Berdasarkan visualisasi yang ditampilkan, dapat disimpulkan bahwa fitur age, judging_score, dan sensing_score mengandung outlier, yang ditunjukkan oleh adanya nilai-nilai data yang berada di luar rentang maksimum normal. Setelah memastikan keberadaan outlier, dilakukan penanganan menggunakan metode IQR (Interquartile Range), yaitu dengan mengganti nilai-nilai outlier menggunakan batas bawah (lower bound) dan batas atas (upper bound) sesuai hasil perhitungan IQR. Pendekatan ini bertujuan untuk menjaga distribusi data tetap representatif tanpa menghapus baris data yang ada.
+
+   ![alt text](https://github.com/Lucknutgacor999/Predicitve_analytics/blob/main/resource/age%20after%20outlier_rv.png?raw=true) 
+
+   ![alt text](https://github.com/Lucknutgacor999/Predicitve_analytics/blob/main/resource/SS%20after%20outlier_rv.png?raw=true) 
+    
+   ![alt text](https://github.com/Lucknutgacor999/Predicitve_analytics/blob/main/resource/JS%20after%20outlier_rv.png?raw=true)
+
+  dari visualisasi diatas dapat disimpulkan bahwa masalah outlier telah diselesaikan karena outlier sudah berhasil diubah.
 
 ### Exploratory Data Analysis - Univariate Analysis
 
@@ -304,21 +318,17 @@ Model machine learning yang digunakan untuk masalah ini terdiri dari 3 model yai
 
 - **Cara Membuat Model**:
 
-  1.   ```from sklearn.neighbors import KNeighborsRegressor```
+  1.   ```from sklearn.neighbors import KNeighborsClassifier```
 
-       - Mengimpor class `KNeighborsRegressor` dari pustaka scikit-learn.
+       - Mengimpor class `KNeighborsClassifier` dari pustaka scikit-learn.
 
-  2.   ```knn = KNeighborsRegressor(n_neighbors=10)```
+  2.   ```KNN = KNeighborsClassifier()```
 
-       - Membuat objek dari class `KNeighborsRegressor` dengan parameter `n_neighbors=10`.
-
-          - **Penjelasan Parameter**:
-
-              - `n_neighbors=10`: Menentukan jumlah tetangga terdekat yang digunakan untuk mengukur jarak antara sampel data. Model akan menggunakan rata-rata nilai target dari 10 tetangga terdekat untuk membuat prediksi.
+       - Membuat objek dari class `KNeighborsClassifier` dengan parameter default.
 
   3.   ```knn.fit(X_train, y_train)```
 
-       - Memanggil metode fit untuk melatih model `KNeighborsRegressor` menggunakan data pelatihan `X_train` dan `y_train`.
+       - Memanggil metode fit untuk melatih model `KNeighborsClassifier` menggunakan data pelatihan `X_train` dan `y_train`.
 
        - `X_train`: Matriks fitur yang digunakan dalam pelatihan model.
 
@@ -442,8 +452,9 @@ Untuk mengevaluasi kinerja model klasifikasi dalam memprediksi tipe kepribadian 
 **Evaluasi Model Machine Learning**
 Model Accuracy Comparison:
 |          |RandomForest       |KNN    |LogReg|
-|train_acc     |0.99207   |0.842649  |0.782249|
-|test_acc      |0.898759  |0.754096  |0.784293|
+|----------|-------------------|-------|------|
+|train_acc |0.99207            |0.842649  |0.782249|
+|test_acc  |0.898759           |0.754096  |0.784293|
 
 - Performa Model pada Training Set:
 Random Forest menunjukkan performa terbaik dengan akurasi 99.21%, diikuti KNN dengan 84.26%, dan Logistic Regression dengan 78.22%. Random Forest hampir mencapai akurasi sempurna pada data training.
