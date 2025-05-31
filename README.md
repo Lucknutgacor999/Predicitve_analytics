@@ -122,6 +122,7 @@ Terdapat 1028 duplikat pada dataset
     ![alt text](https://github.com/Lucknutgacor999/Predicitve_analytics/blob/main/resource/Boxplot%20Outlier%20TS.png?raw=true) 
     ![alt text](https://github.com/Lucknutgacor999/Predicitve_analytics/blob/main/resource/boxplot%20outlier%20JS.png?raw=true) 
     ![alt text](https://github.com/Lucknutgacor999/Predicitve_analytics/blob/main/resource/boxplot%20outlier%20SS.png?raw=true)
+  
 Dari visualisasi pada boxplot dapat diketahui terdapat 3 kolom yang memiliki nilai outlier 
 
 | Jumah Baris                           | Jumlah Kolom |
