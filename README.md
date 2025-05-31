@@ -147,9 +147,7 @@ Dari visualisasi pada boxplot dapat diketahui terdapat 3 kolom yang memiliki nil
 
 ## Data Preparation
 
-### Exploratory Data Analysis - Menangani Duplikat, Missing Value dan Outliers
-
-**Mengecek missing value, Duplikat dan data yang dianggap memiliki kejanggalan.**
+### Exploratory Data Analysis - Menangani Duplikat dan Outliers
 
 | #  | Column                            | Non-Null Count | Dtype   |
 |----|------------------------------------|----------------|---------|
