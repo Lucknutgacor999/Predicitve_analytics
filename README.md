@@ -112,8 +112,7 @@ Table diatas memberikan informasi statistik pada masing-masing kolom, antara lai
 | Data Dupliat                        |
 |-------------------------------------|
 | 1028                               |
-
-- Terdapat 1028 duplikat pada dataset
+Terdapat 1028 duplikat pada dataset
 
 **Mengecek Outlier**
     ![alt text](https://github.com/Lucknutgacor999/Predicitve_analytics/blob/main/resource/boxplot%20outlier%20age.png?raw=true) 
