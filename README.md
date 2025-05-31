@@ -122,8 +122,24 @@ Terdapat 1028 duplikat pada dataset
     ![alt text](https://github.com/Lucknutgacor999/Predicitve_analytics/blob/main/resource/Boxplot%20Outlier%20TS.png?raw=true) 
     ![alt text](https://github.com/Lucknutgacor999/Predicitve_analytics/blob/main/resource/boxplot%20outlier%20JS.png?raw=true) 
     ![alt text](https://github.com/Lucknutgacor999/Predicitve_analytics/blob/main/resource/boxplot%20outlier%20SS.png?raw=true)
-  
+
 Dari visualisasi pada boxplot dapat diketahui terdapat 3 kolom yang memiliki nilai outlier 
+
+**Mengecek Missing Values**
+
+  | Column                              | Value |
+  |-------------------------------------|-------|
+  | Age                                 | 0     |
+  | Gender                              | 0     |
+  | Education                           | 0     |
+  | Introversion Score                  | 0     |
+  | Sensing Score                       | 0     |
+  | Thinking Score                      | 0     |
+  | Judging Score                       | 0     |
+  | Interest                            | 0     |
+  | Personality                         | 0     |
+
+- Pada tabel diatas didapati bahwa tidak terdapat missing value pada dataset.
 
 | Jumah Baris                           | Jumlah Kolom |
 |---------------------------------------|--------------|
@@ -143,26 +159,10 @@ Dari visualisasi pada boxplot dapat diketahui terdapat 3 kolom yang memiliki nil
 
 - Sebanyak 1028 data akan dihapus karena duplikat bertujuan untuk memastikan model machine learning belajar dari pola yang sebenarnya, bukan dari data yang berulang secara tidak wajar. Ini membantu mencegah bias, overfitting, serta meningkatkan akurasi dan generalisasi model, sekaligus menghemat waktu dan sumber daya komputasi.
 
-  | Column                              | Value |
-  |-------------------------------------|-------|
-  | Age                                 | 0     |
-  | Gender                              | 0     |
-  | Education                           | 0     |
-  | Introversion Score                  | 0     |
-  | Sensing Score                       | 0     |
-  | Thinking Score                      | 0     |
-  | Judging Score                       | 0     |
-  | Interest                            | 0     |
-  | Personality                         | 0     |
-
-- Pada tabel diatas didapati bahwa tidak terdapat missing value pada dataset.
-
-**Melakukan visualisasi data dengan boxplot pada tipa numerik** 
+**Menangani Outlier** 
 
 - Untuk mengetahui apakah data dapat dikatakan outlier dapat dilihat menggunakan teknik visualisasi, yaitu jenis boxplot.
-
-- Gambar dibawah adalah ilustrasi dan penjelasan nilai statistik pada boxplot.
-     
+  
   ![alt text](https://github.com/Lucknutgacor999/Predicitve_analytics/blob/main/resource/boxplot%20outlier%20JS.png?raw=true)
      
    - Pada gambar terlihat, apabila data melebihi rentang Minimum atau Maximum, maka dapat dikatakan outlier.
@@ -172,7 +172,6 @@ Dari visualisasi pada boxplot dapat diketahui terdapat 3 kolom yang memiliki nil
    ![alt text](https://github.com/Lucknutgacor999/Predicitve_analytics/blob/main/resource/boxplot%20outlier%20SS.png?raw=true)
 
    ![alt text](https://github.com/Lucknutgacor999/Predicitve_analytics/blob/main/resource/boxplot%20outlier%20JS.png?raw=true)  
-        
         
 - Berdasarkan visualisasi yang ditampilkan, dapat disimpulkan bahwa fitur age, judging_score, dan sensing_score mengandung outlier, yang ditunjukkan oleh adanya nilai-nilai data yang berada di luar rentang maksimum normal. Setelah memastikan keberadaan outlier, dilakukan penanganan menggunakan metode IQR (Interquartile Range), yaitu dengan mengganti nilai-nilai outlier menggunakan batas bawah (lower bound) dan batas atas (upper bound) sesuai hasil perhitungan IQR. Pendekatan ini bertujuan untuk menjaga distribusi data tetap representatif tanpa menghapus baris data yang ada.
 
