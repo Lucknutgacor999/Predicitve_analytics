@@ -159,7 +159,9 @@ Mengganti tipe data age dari float ke integer dilakukan karena usia secara logis
 **Menghapus Duplikat** 
 - Sebanyak 1028 data akan dihapus karena duplikat bertujuan untuk memastikan model machine learning belajar dari pola yang sebenarnya, bukan dari data yang berulang secara tidak wajar. Ini membantu mencegah bias, overfitting, serta meningkatkan akurasi dan generalisasi model, sekaligus menghemat waktu dan sumber daya komputasi.
 
-|jumlah data duplikat| 0 |
+| Jumah Duplikat |
+|---------------------------------------|
+| 0                                 | 
 
 **Menangani Outlier** 
 - Untuk mengetahui apakah data dapat dikatakan outlier dapat dilihat menggunakan teknik visualisasi, yaitu jenis boxplot.
