@@ -157,7 +157,7 @@ Dari visualisasi pada boxplot dapat diketahui terdapat 3 kolom yang memiliki nil
 Mengganti tipe data age dari float ke integer dilakukan karena usia secara logis direpresentasikan sebagai bilangan bulat—tidak masuk akal untuk menyatakan usia seseorang sebagai 25.7 tahun dalam konteks kebanyakan analisis atau pemodelan. Selain itu, konversi ini membantu menyederhanakan data, mengurangi kompleksitas, dan menghindari potensi kesalahan pembulatan atau interpretasi saat model machine learning memproses fitur tersebut.
 
 **Menghapus Duplikat** 
-- Sebanyak 1028 data akan dihapus karena duplikat bertujuan untuk memastikan model machine learning belajar dari pola yang sebenarnya, bukan dari data yang berulang secara tidak wajar. Ini membantu mencegah bias, overfitting, serta meningkatkan akurasi dan generalisasi model, sekaligus menghemat waktu dan sumber daya komputasi.
+Sebanyak 1028 data akan dihapus karena duplikat bertujuan untuk memastikan model machine learning belajar dari pola yang sebenarnya, bukan dari data yang berulang secara tidak wajar. Ini membantu mencegah bias, overfitting, serta meningkatkan akurasi dan generalisasi model, sekaligus menghemat waktu dan sumber daya komputasi.
 
 | Jumah Duplikat |
 |---------------------------------------|
