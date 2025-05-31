@@ -112,16 +112,17 @@ Table diatas memberikan informasi statistik pada masing-masing kolom, antara lai
 | Data Dupliat                        |
 |-------------------------------------|
 | 1028                               |
+
 Terdapat 1028 duplikat pada dataset
 
 **Mengecek Outlier**
+- Berikut adalah visualisasi data numerik menggunakan boxplot untuk mengecek outlier
     ![alt text](https://github.com/Lucknutgacor999/Predicitve_analytics/blob/main/resource/boxplot%20outlier%20age.png?raw=true) 
     ![alt text](https://github.com/Lucknutgacor999/Predicitve_analytics/blob/main/resource/Boxplot%20Outlier%20IS.png?raw=true) 
     ![alt text](https://github.com/Lucknutgacor999/Predicitve_analytics/blob/main/resource/Boxplot%20Outlier%20TS.png?raw=true) 
     ![alt text](https://github.com/Lucknutgacor999/Predicitve_analytics/blob/main/resource/boxplot%20outlier%20JS.png?raw=true) 
     ![alt text](https://github.com/Lucknutgacor999/Predicitve_analytics/blob/main/resource/boxplot%20outlier%20SS.png?raw=true)
-
-- Dari visualisasi pada boxplot dapat diketahui terdapat 3 kolom yang memiliki nilai outlier 
+Dari visualisasi pada boxplot dapat diketahui terdapat 3 kolom yang memiliki nilai outlier 
 
 | Jumah Baris                           | Jumlah Kolom |
 |---------------------------------------|--------------|
