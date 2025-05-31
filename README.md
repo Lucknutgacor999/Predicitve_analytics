@@ -70,15 +70,15 @@ Dari website kaggle dapat diketahui kumpulan data sintetis ini dirancang untuk m
 
 | #  | Column                            | Non-Null Count | Dtype   |
 |----|------------------------------------|----------------|---------|
-| 0  | Age                             | 7385 non-null   | float64 |
-| 1  | Gender                          | 7385 non-null   | object  |
-| 2  | Education                       | 7385 non-null   | int64   |
-| 3  | Introversion Score              | 7385 non-null   | float64 |
-| 4  | Sensing Score                   | 7385 non-null   | float64 |
-| 5  | Thinking Score                  | 7385 non-null   | float64 |
-| 6  | Judging Score                   | 7385 non-null   | float64 |
-| 7  | Interest                        | 7385 non-null   | object  |
-| 8  | Personality                     | 7385 non-null   | object  |
+| 0  | Age                             | 43744 non-null   | float64 |
+| 1  | Gender                          | 43744 non-null   | object  |
+| 2  | Education                       | 43744 non-null   | int64   |
+| 3  | Introversion Score              | 43744 non-null   | float64 |
+| 4  | Sensing Score                   | 43744 non-null   | float64 |
+| 5  | Thinking Score                  | 43744 non-null   | float64 |
+| 6  | Judging Score                   | 43744 non-null   | float64 |
+| 7  | Interest                        | 43744 non-null   | object  |
+| 8  | Personality                     | 43744 non-null   | object  |
 
 Dari table diatas dapat diketahui bahwa terdapat:
 
@@ -108,6 +108,23 @@ Table diatas memberikan informasi statistik pada masing-masing kolom, antara lai
 - 75% adalah kuartil ketiga.
 - Max adalah nilai maksimum.
 
+Mengecek duplikat
+
+| Data Dupliat                        |
+|-------------------------------------|
+| 1028                               |
+
+- Terdapat 1028 duplikat pada dataset
+
+Mengecek Outlier
+![alt text](https://github.com/Lucknutgacor999/Predicitve_analytics/blob/main/resource/boxplot%20outlier%20age.png?raw=true) 
+![alt text](https://github.com/Lucknutgacor999/Predicitve_analytics/blob/main/resource/Boxplot%20Outlier%20IS.png?raw=true) 
+![alt text](https://github.com/Lucknutgacor999/Predicitve_analytics/blob/main/resource/Boxplot%20Outlier%20TS.png?raw=true) 
+![alt text](https://github.com/Lucknutgacor999/Predicitve_analytics/blob/main/resource/boxplot%20outlier%20JS.png?raw=true) 
+![alt text](https://github.com/Lucknutgacor999/Predicitve_analytics/blob/main/resource/boxplot%20outlier%20SS.png?raw=true)
+
+- Dari visualisasi pada boxplot dapat diketahui terdapat 3 kolom yang memiliki nilai outlier 
+
 | Jumah Baris                           | Jumlah Kolom |
 |---------------------------------------|--------------|
 | 43744                                  | 9   |
@@ -120,13 +137,9 @@ Table diatas memberikan informasi statistik pada masing-masing kolom, antara lai
 
 | #  | Column                            | Non-Null Count | Dtype   |
 |----|------------------------------------|----------------|---------|
-| 0  | Age                             | 7385 non-null   | int64 |
+| 0  | Age                             |  43744 non-null   | int64 |
 
 - Mengganti tipe data age dari float ke integer dilakukan karena usia secara logis direpresentasikan sebagai bilangan bulat—tidak masuk akal untuk menyatakan usia seseorang sebagai 25.7 tahun dalam konteks kebanyakan analisis atau pemodelan. Selain itu, konversi ini membantu menyederhanakan data, mengurangi kompleksitas, dan menghindari potensi kesalahan pembulatan atau interpretasi saat model machine learning memproses fitur tersebut.
-
-| Data Dupliat                        |
-|-------------------------------------|
-| 1028                               |
 
 - Sebanyak 1028 data akan dihapus karena duplikat bertujuan untuk memastikan model machine learning belajar dari pola yang sebenarnya, bukan dari data yang berulang secara tidak wajar. Ini membantu mencegah bias, overfitting, serta meningkatkan akurasi dan generalisasi model, sekaligus menghemat waktu dan sumber daya komputasi.
 
@@ -143,7 +156,6 @@ Table diatas memberikan informasi statistik pada masing-masing kolom, antara lai
   | Personality                         | 0     |
 
 - Pada tabel diatas didapati bahwa tidak terdapat missing value pada dataset.
-
 
 **Melakukan visualisasi data dengan boxplot pada tipa numerik** 
 
