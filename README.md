@@ -108,20 +108,19 @@ Table diatas memberikan informasi statistik pada masing-masing kolom, antara lai
 - 75% adalah kuartil ketiga.
 - Max adalah nilai maksimum.
 
-Mengecek duplikat
-
+**Mengecek duplikat**
 | Data Dupliat                        |
 |-------------------------------------|
 | 1028                               |
 
 - Terdapat 1028 duplikat pada dataset
 
-Mengecek Outlier
-![alt text](https://github.com/Lucknutgacor999/Predicitve_analytics/blob/main/resource/boxplot%20outlier%20age.png?raw=true) 
-![alt text](https://github.com/Lucknutgacor999/Predicitve_analytics/blob/main/resource/Boxplot%20Outlier%20IS.png?raw=true) 
-![alt text](https://github.com/Lucknutgacor999/Predicitve_analytics/blob/main/resource/Boxplot%20Outlier%20TS.png?raw=true) 
-![alt text](https://github.com/Lucknutgacor999/Predicitve_analytics/blob/main/resource/boxplot%20outlier%20JS.png?raw=true) 
-![alt text](https://github.com/Lucknutgacor999/Predicitve_analytics/blob/main/resource/boxplot%20outlier%20SS.png?raw=true)
+**Mengecek Outlier**
+    ![alt text](https://github.com/Lucknutgacor999/Predicitve_analytics/blob/main/resource/boxplot%20outlier%20age.png?raw=true) 
+    ![alt text](https://github.com/Lucknutgacor999/Predicitve_analytics/blob/main/resource/Boxplot%20Outlier%20IS.png?raw=true) 
+    ![alt text](https://github.com/Lucknutgacor999/Predicitve_analytics/blob/main/resource/Boxplot%20Outlier%20TS.png?raw=true) 
+    ![alt text](https://github.com/Lucknutgacor999/Predicitve_analytics/blob/main/resource/boxplot%20outlier%20JS.png?raw=true) 
+    ![alt text](https://github.com/Lucknutgacor999/Predicitve_analytics/blob/main/resource/boxplot%20outlier%20SS.png?raw=true)
 
 - Dari visualisasi pada boxplot dapat diketahui terdapat 3 kolom yang memiliki nilai outlier 
 
